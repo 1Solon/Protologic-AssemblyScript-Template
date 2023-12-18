@@ -1,0 +1,30 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "node tools/scripts/build.js",
+    "sim": "node tools/scripts/sim.js",
+    "play": "node tools/scripts/run.js",
+    "test": "npm run build && npm run sim && npm run play"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@assemblyscript/wasi-shim": "^0.1.0",
+    "@types/node": "^20.10.0",
+    "assemblyscript": "^0.27.22"
+  },
+  "dependencies": {
+    "long": "^5.2.3"
+  },
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  }
+}
